@@ -6,7 +6,6 @@ public:
     {
 
     }
-    // сделаем "обёртки" для всех методов поиска, чтобы сохранять результаты для нашей статистики
     template <typename DocumentPredicate>
     vector<Document> AddFindRequest(const string& raw_query, DocumentPredicate document_predicate) {
         vector<Document> request = search_server_.FindTopDocuments(raw_query, document_predicate);
